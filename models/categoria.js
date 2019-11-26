@@ -1,7 +1,7 @@
-import mongoose, {Shema} from 'mongoose';
+import mongoose, {Schema} from 'mongoose';
 
 
-const categoriaShema= new Shema({
+const categoriaShema= new Schema({
     nombre:{type:String, maxlength:50, unique:true, required:true},
     descripcion: {type: String, maxlength:255},
     estado: {type:Number, default:1},

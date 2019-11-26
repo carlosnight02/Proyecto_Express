@@ -2,7 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+import router from './routes';
 /*
 const express= require('express');
 const morgan= require('morgan');
@@ -25,6 +26,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname ,'public')));
+
+app.use('/api', router)
 
 app.set('port', process.env.PORT || 3000)
 
